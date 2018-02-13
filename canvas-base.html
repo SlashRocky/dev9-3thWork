@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>Draw the Line</title>
+  
+  <!-- mobile meta -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="apple-touch-icon" href="lib/img/apple-touch-icon.png">
+  <link rel="icon" href="lib/img/favicon.png">
+  <!--[if IE]>
+  <link rel="shortcut icon" href="/lib/img/favicon.ico">
+  <![endif]-->
+  <meta name="msapplication-TileColor" content="#f01d4f">
+  <meta name="msapplication-TileImage" content="lib/img/win8-tile-icon.png">
+  
+  <!-- favicon -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="lib/img/favicon.ico" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/css/canvas-base.css">
+  
+</head>
+
+<body>
+ 	
+  <div class="wrapper">
+    <h1 class="text-center">Simple Paint</h1>
+    
+    <div class="input">
+      <p class="input-item">
+          <input type="color" name="color" id="color">
+          <i id="pen" class="fa fa-pencil" aria-hidden="true"></i>
+          <i id="erase" class="fa fa-eraser" aria-hidden="true"></i>
+          <span>太さ</span><input type="range" name="range" id="range" min="1" max="100" value="1"><span id="line" class="range">1</span>
+          <button type="button" id="undo-btn">戻る</button>
+          <button type="button" id="clear-btn">消去</button>
+          <button type="button" id="save-btn">保存</button>
+      </p>
+      <p>
+        <input class="input-title" type="text" placeholder="タイトルを入力して下さい">
+      </p>
+      <canvas id="canvas" width="500" height="500"></canvas>
+    </div>
+   
+    <div class="output">
+      <p class="output-titleText">view</p>
+      <p>
+		<select name="output-title" id="output-title" class="output-title">
+          <!--
+              <option class="image-title"><span class="titel-text">HTML</span></option>
+              <option class="image-title">CSS</option>
+              <option class="image-title">JavaScript</option>
+              <option class="image-title">jQuery</option>
+              <option> class="image-title"React</option>
+              <option class="image-title">Node.js</option>
+              <option class="image-title">PHP</option>
+              <option class="image-title">Laravel</option>
+              <option class="image-title">My SQL</option>
+              <option class="image-title">Ruby</option>
+              <option class="image-title"Ruby on Rails</option>
+              <option class="image-title">Other</option>
+          -->
+		</select>
+      </p>
+      <img id="myImage" class="output-image" alt="" width="500" height="500" />
+    </div>
+   
+    <div class="clearfix"></div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script src="lib/js/canvas-base.js"></script>
+
+</body>
+
+</html>
